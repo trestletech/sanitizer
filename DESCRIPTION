@@ -1,12 +1,12 @@
 Package: sanitizer
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Sanitize HTML
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Jeff Allen
+Maintainer: Jeff Allen
+Description: Given inputs in HTML or Markdown, sanitize the output to a
+  customizable set of trusted HTML tags and attributes
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
