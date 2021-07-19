@@ -4,7 +4,7 @@
 \alias{sanitize_html}
 \title{Sanitize an HTML string}
 \usage{
-sanitize_html(html, safe_tags = safe_tags)
+sanitize_html(html, safe_tags = default_tags)
 }
 \description{
 Sanitize an HTML string

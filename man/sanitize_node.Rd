@@ -4,7 +4,7 @@
 \alias{sanitize_node}
 \title{Sanitize an xml2 node}
 \usage{
-sanitize_node(node, safe_tags = safe_tags)
+sanitize_node(node, safe_tags = default_tags)
 }
 \description{
 Sanitize an xml2 node

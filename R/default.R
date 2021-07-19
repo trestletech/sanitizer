@@ -1,7 +1,7 @@
 #' Default list of safe tags
 #'
 #' @export
-safe_tags <- list(
+default_tags <- list(
   a=c("href"),
   abbr=character(0),
   address=character(0),

@@ -5,7 +5,7 @@
 #' @importFrom xml2 xml_set_attrs
 #' @importFrom xml2 xml_remove
 #' @export
-sanitize_node <- function(node, safe_tags = safe_tags){
+sanitize_node <- function(node, safe_tags = default_tags){
   # lookup rules for this node
   nm <- xml_name(node)
   safe <- safe_tags[[nm]]
@@ -29,7 +29,7 @@ sanitize_node <- function(node, safe_tags = safe_tags){
 
 #' Sanitize an HTML string
 #' @export
-sanitize_html <- function(html, safe_tags = safe_tags) {
+sanitize_html <- function(html, safe_tags = default_tags) {
   node <- xml2::read_xml(html)
   san <- sanitize_node(node, safe_tags)
   as.character(san, options=c("no_declaration"))
@@ -39,7 +39,7 @@ sanitize_html <- function(html, safe_tags = safe_tags) {
 #'
 #' Which can also contain HTML inside of it.
 #' @export
-sanitize_markdown <- function(md, safe_tags = safe_tags) {
+sanitize_markdown <- function(md, safe_tags = default_tags) {
   html <- markdown::markdownToHTML(text=md, fragment.only = TRUE)
   san <- sanitize_html(html, safe_tags)
   as.character(san, options=c("no_declaration"))

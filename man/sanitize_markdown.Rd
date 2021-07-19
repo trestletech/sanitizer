@@ -4,7 +4,7 @@
 \alias{sanitize_markdown}
 \title{Sanitize a markdown string}
 \usage{
-sanitize_markdown(md, safe_tags = safe_tags)
+sanitize_markdown(md, safe_tags = default_tags)
 }
 \description{
 Which can also contain HTML inside of it.
