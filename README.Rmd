@@ -17,6 +17,10 @@ library(sanitizer)
 
 # sanitizer
 
+<!-- badges: start -->
+[![R build status](https://github.com/trestletech/sanitizer/workflows/R-CMD-check/badge.svg)](https://github.com/trestletech/sanitizer/actions)
+<!-- badges: end -->
+
 Sanitize HTML in R. Here's an example of a markdown strings that includes a potentially malicious script tag. It also has a `target` attribute in the `<a>` tag which we don't allow by default. You can see that we render the markdown to HTML and then sanitize the resultant HTML to only allow the approved tags and attributes.
 
 ```{r}
