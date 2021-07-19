@@ -1,5 +1,6 @@
 #' Default list of safe tags
 #'
+#' Inspired by https://www.npmjs.com/package/sanitize-html
 #' @export
 default_tags <- list(
   a=c("href"),
