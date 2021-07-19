@@ -6,6 +6,11 @@
 \usage{
 sanitize_node(node, safe_tags = default_tags)
 }
+\arguments{
+\item{node}{An xml2 node}
+
+\item{safe_tags}{the list of tags which are to be permitted during sanitization.}
+}
 \description{
 Sanitize an xml2 node
 }

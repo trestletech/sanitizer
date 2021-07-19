@@ -1,4 +1,6 @@
 #' Sanitize an xml2 node
+#' @param node An xml2 node
+#' @param safe_tags the list of tags which are to be permitted during sanitization.
 #' @importFrom xml2 xml_children
 #' @importFrom xml2 xml_name
 #' @importFrom xml2 xml_attrs
@@ -28,6 +30,8 @@ sanitize_node <- function(node, safe_tags = default_tags){
 }
 
 #' Sanitize an HTML string
+#' @param html An HTML string to be sanitized
+#' @param safe_tags the list of tags which are to be permitted during sanitization.
 #' @export
 sanitize_html <- function(html, safe_tags = default_tags) {
   node <- xml2::read_xml(html)
@@ -38,6 +42,9 @@ sanitize_html <- function(html, safe_tags = default_tags) {
 #' Sanitize a markdown string
 #'
 #' Which can also contain HTML inside of it.
+#'
+#' @param md Markdown to be parsed and sanitized.
+#' @param safe_tags the list of tags which are to be permitted during sanitization.
 #' @export
 sanitize_markdown <- function(md, safe_tags = default_tags) {
   if (!requireNamespace("commonmark", quietly = TRUE)) {

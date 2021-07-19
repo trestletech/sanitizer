@@ -11,6 +11,6 @@ An object of class \code{list} of length 69.
 default_tags
 }
 \description{
-Default list of safe tags
+Inspired by https://www.npmjs.com/package/sanitize-html
 }
 \keyword{datasets}

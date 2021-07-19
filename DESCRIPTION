@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Jeff Allen
 Maintainer: Jeff Allen <jeff@rstudio.com>
 Description: Given inputs in HTML or Markdown, sanitize the output to a
-  customizable set of trusted HTML tags and attributes
+  customizable set of trusted HTML tags and attributes.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

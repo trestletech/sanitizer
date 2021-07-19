@@ -6,6 +6,11 @@
 \usage{
 sanitize_html(html, safe_tags = default_tags)
 }
+\arguments{
+\item{html}{An HTML string to be sanitized}
+
+\item{safe_tags}{the list of tags which are to be permitted during sanitization.}
+}
 \description{
 Sanitize an HTML string
 }

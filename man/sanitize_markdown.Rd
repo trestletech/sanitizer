@@ -6,6 +6,11 @@
 \usage{
 sanitize_markdown(md, safe_tags = default_tags)
 }
+\arguments{
+\item{md}{Markdown to be parsed and sanitized.}
+
+\item{safe_tags}{the list of tags which are to be permitted during sanitization.}
+}
 \description{
 Which can also contain HTML inside of it.
 }
