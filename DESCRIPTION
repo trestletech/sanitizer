@@ -10,8 +10,8 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-  xml2,
-  markdown
+  xml2
 RoxygenNote: 7.1.1
 Suggests: 
-    testthat
+  commonmark,
+  testthat

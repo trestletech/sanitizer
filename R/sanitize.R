@@ -40,7 +40,10 @@ sanitize_html <- function(html, safe_tags = default_tags) {
 #' Which can also contain HTML inside of it.
 #' @export
 sanitize_markdown <- function(md, safe_tags = default_tags) {
-  html <- markdown::markdownToHTML(text=md, fragment.only = TRUE)
+  if (!requireNamespace("commonmark", quietly = TRUE)) {
+    stop("commonmark required for sanitize_markdown")
+  }
+  html <- commonmark::markdown_html(text=md)
   san <- sanitize_html(html, safe_tags)
   as.character(san, options=c("no_declaration"))
 }
