@@ -31,7 +31,8 @@ sanitize_node <- function(node, safe_tags = safe_tags){
 #' @export
 sanitize_html <- function(html, safe_tags = safe_tags) {
   node <- xml2::read_xml(html)
-  sanitize_node(node, safe_tags)
+  san <- sanitize_node(node, safe_tags)
+  as.character(san, options=c("no_declaration"))
 }
 
 #' Sanitize a markdown string
@@ -40,5 +41,6 @@ sanitize_html <- function(html, safe_tags = safe_tags) {
 #' @export
 sanitize_markdown <- function(md, safe_tags = safe_tags) {
   html <- markdown::markdownToHTML(text=md, fragment.only = TRUE)
-  sanitize_html(html, safe_tags)
+  san <- sanitize_html(html, safe_tags)
+  as.character(san, options=c("no_declaration"))
 }

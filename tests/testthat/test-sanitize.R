@@ -16,7 +16,7 @@ test_that("sanitize_node works", {
 test_that("sanitize_html works", {
   html <- '<p><a href="https://yahoo.com" target="_blank">link</a><hr /><script>what</script></p>'
   san <- sanitize_html(html, safe_tags)
-  expect_equal(as.character(san, options=c("no_declaration")), "<p><a href=\"https://yahoo.com\">link</a><hr/></p>\n")
+  expect_equal(san, "<p><a href=\"https://yahoo.com\">link</a><hr/></p>\n")
 })
 
 
@@ -24,7 +24,7 @@ test_that("sanitize_markdown works", {
   md <- '**hi**<a href="https://yahoo.com" target="_blank">link</a><hr /><script>what</script> there'
   san <- sanitize_markdown(md, safe_tags)
   expect_equal(
-    as.character(san, options=c("format","no_declaration")),
+    san,
     "<p><strong>hi</strong><a href=\"https://yahoo.com\">link</a><hr/> there</p>\n"
   )
 })
